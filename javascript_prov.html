@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <img id="demo_img" src="" alt="bild kunde inte visas (den finns inte)">
+    
+    <script id="uppgift1">
+        function returnSum(a, b)
+        {
+            return a + b;
+        }
+    </script>
+
+    <script id="uppgift2">
+        document.getElementById("demo").innerHTML = "Hej";
+    </script>
+
+    <script id="uppgift3">
+        function changeImgSrc(new_src="bild.jpg")
+        {
+            document.getElementById("demo_img").src = new_src;
+        }
+        changeImgSrc();
+    </script>
+
+    <script id="uppgift4">
+        const myArray = [15, 3, 12, 7, 4];
+
+        
+        function subtractArray(inpArr=myArray) //låt funktionen ta andra parametrar men gå till myArray som standard.
+        {
+            const outArr = [];
+            //for of loop lämpligt då vi söker värdet inte index.
+            for (i of inpArr)
+            {
+                outArr.push(i - 1);
+            }
+            return outArr;
+        }
+        console.log(subtractArray())
+    </script>
+
+    <div id="uppgift5" style="margin-top: 25px;">
+        <form action="" name="myForm">
+            <label for="text_inp">Skriv text här:</label>
+            <input type="text" name="text_inp">
+            <button type="submit" onclick="alert(document.forms['myForm']['text_inp'].value)">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
